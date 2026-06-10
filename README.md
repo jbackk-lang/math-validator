@@ -31,9 +31,8 @@ pip install -r requirements.txt
 
 http://127.0.0.1:8000
 
-http://127.0.0.1:8000/docs           
-wpisz {
-  "equation": "sin(x)"
-}
+http://127.0.0.1:8000/docs
+
+wpisz np.   "equation": "sin(x)"
 
 otrzymasz base64 PNG wykres
