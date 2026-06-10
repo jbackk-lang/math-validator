@@ -1,3 +1,4 @@
+from plot import generate_plot
 from fastapi import FastAPI
 from pydantic import BaseModel
 from validator import validate
@@ -19,3 +20,10 @@ def validate_equation(data: Equation):
         "result": result
     }
 
+@app.post("/plot")
+def plot_equation(data: Equation):
+    img = generate_plot(data.equation)
+    return {
+        "input": data.equation,
+        "image_base64": img
+    }
