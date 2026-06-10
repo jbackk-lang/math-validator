@@ -1,4 +1,9 @@
-
+def run(expr: str):
+    # analiza
+    return {
+        "status": "ok",
+        "details": ...
+    }
 def run(expr: str):
     # filtr Möbiusa: wykrywa odwrócenia, pętle, transformacje
     score = 0
