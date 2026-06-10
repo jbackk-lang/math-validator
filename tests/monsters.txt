@@ -1,0 +1,6 @@
+# Równania ekstremalne (Λ–τ–ρ jednocześnie)
+
+((x^5 - 3x^2 + 1) / (x^3 - 4)) + sqrt(1/(x-1)) - 1/(x+1)
+sin(x) + 1/(cos(x)) + sqrt(1/(x-2))
+(x^4 - 1)/(x^2 - 1) + sqrt(x^2 + 1) - 1/(x-1)
+(x^3 - x)/(x^2 - 4) + sqrt(1/(x-1)) - 1/(x+1)
