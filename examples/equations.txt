@@ -1,0 +1,35 @@
+# ============================================
+#  RÓWNANIA TESTOWE DLA WALIDATORA Λ–τ–ρ
+# ============================================
+
+# --- 1. Proste algebraiczne ---
+2 + 2
+x + 2 = 5
+x^2 - 4
+(x^2 - 1) / (x - 1)
+
+# --- 2. Pierwiastki i potęgi ---
+sqrt(x+3)
+sqrt(1/(x-1))
+(x^3 - 2x) / (x^2 - 4) + sqrt(x^2 + 1)
+
+# --- 3. Singularności / asymptoty (ρ) ---
+1/x
+1/(x-1)
+(x^2 - 1) / (x - 1) - 1/x
+1/(x^2 - 4)
+
+# --- 4. Trygonometria / cykle (Λ) ---
+sin(x)
+cos(x)
+sin(x) + 1/cos(x)
+sin(x) + cos(x) = 1
+
+# --- 5. Skręty Möbiusa / transformacje (τ) ---
+1/(x-2) + x/(x^2+1) - sqrt(1/x)
+(1/x) + (1/(x-1)) - (1/(x+1))
+(x^2 + 1) / (x^2 - 1) - 1/(x-1)
+
+# --- 6. Potwory topologiczne (pełny Λ–τ–ρ) ---
+((x^3 - 2x) / (x^2 - 4)) + sqrt(1/(x-1)) - 1/(x+1)
+(x^2 - 1)/(x-1) + sqrt(x+3) - 1/x
