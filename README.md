@@ -89,22 +89,22 @@ Filtr topologiczny bada równanie w trzech wymiarach:
 
 math-validator/
 │
-├── api.py                # FastAPI backend
-├── validator.py          # Główny walidator filtrów
-├── filters/              # Modułowe filtry
+├── api.py   FastAPI backend
+├── validator.py   Główny walidator filtrów
+├── filters/   Modułowe filtry
 │   ├── algebra_filter.py
 │   ├── logic_filter.py
 │   ├── numeric_filter.py
-│   ├── topology_filter.py   # Λ–τ–ρ
+│   ├── topology_filter.py    Λ–τ–ρ
 │   └── ...
 │
-├── tests/                # Testy jednostkowe i zestawy równań
+├── tests/                  Testy jednostkowe i zestawy równań
 │   ├── test_basic.py
 │   ├── test_algebra.py
 │   ├── test_numeric.py
 │   └── equations.md
 │
-└── examples/             # Przykładowe równania (opcjonalnie)
+└── examples/             Przykładowe równania (opcjonalnie)
 
 
 ---
