@@ -12,7 +12,3 @@ def validate(equation: str):
         "topology": check_topology(equation),
         "numeric": check_numeric(equation)
     }
-
-if __name__ == "__main__":
-    eq = input("Enter equation: ")
-    print(validate(eq))
