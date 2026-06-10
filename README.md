@@ -24,9 +24,17 @@ Enter equation: x^2 - 4
 
 ## Po pobraniu
 
+uvicorn api:app --reload
+
 pip install -r requirements.txt
+
 uvicorn api:app --reload
 
 http://127.0.0.1:8000
-http://127.0.0.1:8000/docs
 
+http://127.0.0.1:8000/docs           
+wpisz {
+  "equation": "sin(x)"
+}
+
+otrzymasz base64 PNG wykres
