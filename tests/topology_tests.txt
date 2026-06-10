@@ -1,0 +1,25 @@
+# ============================================
+#  TESTY TOPOLOGICZNE Λ – τ – ρ
+# ============================================
+
+# --- Λ: struktura (pętle, cykle, hierarchia) ---
+(x^2 - 1) / (x - 1)
+(x^3 - 2x) / (x^2 - 4)
+sqrt(x^2 + 1)
+sin(x) + cos(x)
+
+# --- τ: transformacje (odwrócenia, skręty, zmiany orientacji) ---
+1/x
+1/(x-2) + x/(x^2+1)
+sqrt(1/x)
+(x^2 + 1) / (x^2 - 1)
+
+# --- ρ: defekty (osobliwości, asymptoty, dziury) ---
+1/(x-1)
+1/(x^2 - 4)
+(x^2 - 1)/(x-1) - 1/x
+sqrt(1/(x-1))
+
+# --- Pełne Λ–τ–ρ (potwory topologiczne) ---
+((x^3 - 2x) / (x^2 - 4)) + sqrt(1/(x-1)) - 1/(x+1)
+(x^2 - 1)/(x-1) + sqrt(x+3) - 1/x
