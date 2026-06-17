@@ -1,39 +1,79 @@
-# Math Validator — Modularny Walidator Równań  
-### (z koncepcyjnym filtrem topologicznym Λ–τ–ρ)
-
-**Math Validator** to uniwersalny system analizy równań matematycznych  
-oparty na modułowych filtrach.  
-Walidator bada równanie na wielu poziomach:
-
-- składniowym  
-- algebraicznym  
-- logicznym  
-- numerycznym  
-- **topologicznym (Λ–τ–ρ)**  
-
-Funkcjonalność jest w pełni techniczna,  
-natomiast filtr Λ–τ–ρ jest **frameworkiem koncepcyjnym**,  
-który interpretuje strukturę równania jako układ:
-
-- **Λ — struktury**,  
-- **τ — transformacji**,  
-- **ρ — defektów**.  
-
-To **język analizy**, nie teoria matematyczna.
+# math-validator  
+Walidator równań matematycznych, który nie tylko sprawdza poprawność zapisu, ale **analizuje strukturę problemu** i wykrywa miejsca, w których logika się łamie.
 
 ---
 
-## 1. Co potrafi Math Validator
+## 🎯 Cel projektu
 
-Walidator analizuje równanie przez zestaw filtrów  
-:
+Celem `math-validator` jest stworzenie narzędzia, które:
 
-- **syntax** — poprawność składniowa  
-- **algebra** — uproszczenia, dziedzina, działania  
-- **logic** — operatory logiczne  
-- **numeric** — obliczenia i błędy numeryczne  
-- **topology (Λ–τ–ρ)** — analiza struktury i punktów niestabilności  
+- wykrywa błędy w równaniach,
+- analizuje strukturę matematyczną,
+- wskazuje miejsca niejednoznaczne,
+- identyfikuje ukryte sprzeczności,
+- radzi sobie z **problemami mylnymi / milejnymi** (podchwytliwymi).
 
-Przykład  
-:
+To nie jest zwykły „checker”.  
+To **analizator struktury matematycznej**, zgodny z Twoją topologią Λ–τ–ρ.
 
+---
+
+## 🧠 Dlaczego ten walidator jest inny
+
+Większość walidatorów:
+
+- sprawdza tylko wynik,
+- albo tylko składnię,
+- albo tylko zgodność nawiasów.
+
+Ten projekt idzie dalej — analizuje **strukturę problemu**, a nie tylko jego powierzchnię.
+
+### Obsługa problemów mylnych / milejnych
+
+„Problemy mylne” to takie, które:
+
+- wyglądają poprawnie, ale są logicznie sprzeczne,
+- mieszają różne notacje,
+- mają ukryte założenia,
+- są zapisane niejednoznacznie,
+- prowadzą do błędnych wniosków mimo poprawnych kroków.
+
+Walidator wykrywa takie miejsca i wskazuje:
+
+- **gdzie** pojawia się błąd strukturalny,
+- **dlaczego** równanie nie może być rozwiązane,
+- **który element** jest źródłem sprzeczności.
+
+To jest bezpośrednie zastosowanie Twojej zasady:
+
+> *„Najpierw struktura, potem transformacja, na końcu defekt.”*
+
+---
+
+## 🔷 Powiązanie z topologią Λ–τ–ρ
+
+Walidator wykorzystuje analogię:
+
+- **Λ (lambda)** — stabilna część równania (to, co jest poprawne),
+- **τ (tau)** — transformacje (kroki przekształceń),
+- **ρ (rho)** — defekty (miejsce, gdzie logika się łamie).
+
+Dzięki temu:
+
+- Λ pozwala wykryć poprawne fragmenty,
+- τ pozwala analizować ciągłość przekształceń,
+- ρ wskazuje błędy, sprzeczności i nieciągłości.
+
+To jest dokładnie ta sama logika, która stoi za filtrem φ.
+
+---
+
+## 🧩 Przykład użycia
+
+```python
+from math_validator import validate
+
+expr = "2(x + 3 = 2x - 5"
+result = validate(expr)
+
+print(result)
