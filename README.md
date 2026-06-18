@@ -91,3 +91,47 @@ singularity_filter
 topology_filter
     ↓
 validate() → wynik końcowy
+
+# Examples
+
+## Podstawowe przypadki
+
+validate("1/x")
+# → {'status': 'twist_detected', 'point': 0}
+
+validate("x/(x**2 - 1)")
+# → {'status': 'twist_detected', 'points': [-1, 1]}
+
+validate("(x+1)/(x+1)")
+# → {'status': 'hidden_singularity', 'point': -1}
+
+validate("x**2 - 4")
+# → {'status': 'clean'}
+
+validate("sqrt(x)")
+# → {'status': 'clean'}
+
+## Złożone wyrażenia
+
+validate("1/x + 1/(x-1)")
+# → {'status': 'twist_detected', 'points': [0, 1]}
+
+validate("x**3/(x**4 - 1)")
+# → {'status': 'twist_detected', 'points': [-1, 1]}
+
+validate("(x-2)/(x-2) + 1/(x+3)")
+# → {'status': 'hidden_singularity', 'point': 2}
+
+validate("(x**2 - 1)/(x - 1)")
+# → {'status': 'hidden_singularity', 'point': 1}
+
+## Przypadki graniczne
+
+validate("1/(x-x)")
+# → {'status': 'twist_detected', 'point': 0}
+
+validate("0")
+# → {'status': 'clean'}
+
+validate("42")
+# → {'status': 'clean'}
