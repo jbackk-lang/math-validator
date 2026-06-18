@@ -135,3 +135,43 @@ validate("0")
 
 validate("42")
 # → {'status': 'clean'}
+
+# Kod użycia
+
+from validator import validate
+
+# 1. Osobliwość typu Möbiusa (twist)
+print(validate("1/x"))
+# → {'status': 'twist_detected', 'point': 0}
+
+# 2. Dwie osobliwości (x = -1, 1)
+print(validate("x/(x**2 - 1)"))
+# → {'status': 'twist_detected', 'points': [-1, 1]}
+
+# 3. Ukryta osobliwość (po uproszczeniu)
+print(validate("(x+1)/(x+1)"))
+# → {'status': 'hidden_singularity', 'point': -1}
+
+# 4. Wyrażenie czyste (brak ρ)
+print(validate("x**2 - 4"))
+# → {'status': 'clean'}
+
+# 5. Złożone wyrażenie z wieloma defektami
+print(validate("1/x + 1/(x-1)"))
+# → {'status': 'twist_detected', 'points': [0, 1]}
+
+# 6. Ukryta osobliwość po skróceniu
+print(validate("(x**2 - 1)/(x - 1)"))
+# → {'status': 'hidden_singularity', 'point': 1}
+
+# 7. Przypadek graniczny (zoo)
+print(validate("1/(x-x)"))
+# → {'status': 'twist_detected', 'point': 0}
+
+# 8. Stałe i proste funkcje
+print(validate("0"))
+# → {'status': 'clean'}
+
+print(validate("42"))
+# → {'status': 'clean'}
+
