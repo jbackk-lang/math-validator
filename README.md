@@ -1,3 +1,8 @@
+## 🔗 Wszystkie modele i repozytoria
+Pełna lista projektów znajduje się na stronie:
+https://jbackk-lang.github.io
+---
+
 # math-validator
 Walidator równań matematycznych z detekcją osobliwości, skrętu i ukrytych defektów.
 
